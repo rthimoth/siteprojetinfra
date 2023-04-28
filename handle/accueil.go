@@ -13,7 +13,7 @@ func Accueil(w http.ResponseWriter, r *http.Request) {
 	var posts []forum.Poste
 	var coms []forum.Commentaire
 	// definision des page a executer
-	pageconnecte := template.Must(template.ParseFiles("./templates/accueilco.html"))
+	pageconnecte := template.Must(template.ParseFiles("./templates/accueil.html"))
 	pagenonconnecte := template.Must(template.ParseFiles("./templates/accueil.html"))
 	// recuperation de de la de la session utilisateur
 	session, err := forum.Store.Get(r, "forum")

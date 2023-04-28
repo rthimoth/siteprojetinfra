@@ -43,44 +43,6 @@ func OuvrirBaseDonnee(chemin string) (*sql.DB, error) {
 	} else {
 		fmt.Println("La table Utilisateurs existe déjà.")
 	}
-	_, err = bd.Exec("SELECT * FROM Postes")
-	if err != nil {
-		// Si la table n'existe pas, la créer
-		_, err := bd.Exec(`CREATE TABLE Postes (
-  id INTEGER PRIMARY KEY,
-  theme TEXT NOT NULL,
-  titre TEXT NOT NULL,
-  description TEXT NOT NULL,
-  cree_le TEXT NOT NULL,
-  cree_par TEXT NOT NULL,
-  likes INT DEFAULT 0,
-  dislikes INT DEFAULT 0
-  )`)
-		if err != nil {
-			fmt.Println(err)
-			return bd, err
-		}
-		fmt.Println("Table Postes créée avec succès.")
-	} else {
-		fmt.Println("La table Postes existe déjà.")
-	}
-	_, err = bd.Exec("SELECT * FROM Commantaires")
-	if err != nil {
-		// Si la table n'existe pas, la créer
-		_, err := bd.Exec(`CREATE TABLE  Commentaires (
-  id INTEGER PRIMARY KEY,
-  idPost INT NOT NULL,
-  idPseudo INT NOT NULL,
-  contenu TEXT NOT NULL
-  )`)
-		if err != nil {
-			fmt.Println(err)
-			return bd, err
-		}
-		fmt.Println("Table Commantaires créée avec succès.")
-	} else {
-		fmt.Println("La table Commantaires existe déjà.")
-	}
 
 	return bd, err
 }
