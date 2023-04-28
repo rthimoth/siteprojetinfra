@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft</title>
+    <link rel="stylesheet" href="./assets/css/connexion.css">
+</head>
+<body>
+    <section class="navigation">
+        <div class="navigation1">
+            <a href="#" class="navigation2">
+                <span>M</span>inecraft 
+            </a>
+            <div class="navigation3">
+                <a href="/connexion" class="creation2">s'inscrire</a>
+            </div>
+            
+        </div>
+    </section>
+    <section class="actualite">
+            <div class="actualite1">
+                <div class="form-box">
+                    <div class="form-value">
+                        <form action="/connexion" method="POST" >
+                            <a href="#" class="actualite2">
+                                <span>S</span>e </a>
+                            <a href="#" class="actualite2">
+                                <span>C</span>onnecter
+                            </a>
+                            <div class="inputbox">
+                                <ion-icon name="mail-outline"></ion-icon>
+                               <input type="TEXT" id="pseudo" name="pseudo" required>
+                               <label for="pseudo">Pseudo</label> 
+                            </div>
+                            <div class="inputbox">
+                                <ion-icon name="lock-closed-outline"></ion-icon>
+                                <input type="password" id="mdp" name="mdp" required>
+                                <label for="">Mot de passe</label> 
+                             </div>
+                             <div class="forget">
+                                <p>{{ .Message }}</p>
+                            </div>
+                            <button>Connexion</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    
+</body>
+</html>
